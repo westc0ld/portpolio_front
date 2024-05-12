@@ -1,18 +1,16 @@
 import Nav from "./nav"
 import Link from "next/link"
-// import "./header.css";
+
 
 export default function Header() {
     return (
         <>
             <header className="header">
                 <div className="container">
-                    <div className="left">
-                        <Link href="/" passHref>
-                            <div className="image"><img src=""/></div>
+                        <Link className="left" href="/" passHref>
+                            <div className="image"><img src="https://i.namu.wiki/i/Pv9NYWGfEhphXAKEef1jRvyPlp_d1DJ2ZeQVY5zSo7b8rfHh7RzVGgggNHPthCd5zITHV9m4d9ZjZhOK4I6Mbw.svg"/></div>
                             <div className="name">West_Cold</div>
                         </Link>
-                    </div>
                     <div>
                     <nav className="menus">
                             <div className="mr-5 hover:text-gray-900">about</div>&nbsp;

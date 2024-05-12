@@ -19,7 +19,7 @@ const ChatGPT = () => {
             setChatHistory(prevChat => [...prevChat, { text: response.data.description, sender: 'bot' }]);
 
             // 상태가 제대로 업데이트되었는지 콘솔에 출력
-            console.log('Response message:', responseMessage);
+            console.log('Response message:', response.data.description);
         } catch (error) {
             console.error('Error sending message:', error);
         }
