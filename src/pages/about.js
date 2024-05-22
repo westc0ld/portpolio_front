@@ -3,38 +3,33 @@ import Layout from "../components/layout";
 const contents = () => {
   return (
     <Layout>
-        <section class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto flex flex-col">
-                <div class="lg:w-4/6 mx-auto">
-                <div class="rounded-lg h-64 overflow-hidden">
-                    <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1200x500"/>
-                </div>
-                <div class="flex flex-col sm:flex-row mt-10">
-                    <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                    <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
+        <section className="about">
+            <div className="container">
+                <div className="mini">
+                    <div className="content_1">
+                        <div className="photo">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div className="abstract">
+                            <h2 className="abstract_name">west__cold</h2>
+                            <div className="line"></div>
+                            <p className="text-base">Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland.</p>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center text-center justify-center">
-                        <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Phoebe Caulfield</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
-                        <p class="text-base">Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland.</p>
+                    <div className="content_2">
+                        <p className="introduce">안녕하세요, 저는 서찬이라고 합니다. 나날이 성장하고 발전하는 것을 즐기는 사람입니다. 언제나 새로운 도전을 즐기며 적극적으로 나아가는 성격을 가지고 있습니다. 주변 사람들과 소통을 중요시하며 친절하고 협력적인 성향을 가지고 있습니다. 항상 포기하지 않고 열정적으로 목표를 향해 나아가는 것을 좋아합니다. 함께 즐거움과 성취를 공유할 수 있는 좋은 동료가 되고 싶습니다.</p>
+                        <div className="more">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
                     </div>
-                    </div>
-                    <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                    <p class="leading-relaxed text-lg mb-4">Meggings portland fingerstache lyft, post-ironic fixie man bun banh mi umami everyday carry hexagon locavore direct trade art party. Locavore small batch listicle gastropub farm-to-table lumbersexual salvia messenger bag. Coloring book flannel truffaut craft beer drinking vinegar sartorial, disrupt fashion axe normcore meh butcher. Portland 90's scenester vexillologist forage post-ironic asymmetrical, chartreuse disrupt butcher paleo intelligentsia pabst before they sold out four loko. 3 wolf moon brooklyn.</p>
-                    <a class="text-indigo-500 inline-flex items-center">Learn More
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                    </div>
-                </div>
                 </div>
             </div>
-        </section>
+      </section>
     </Layout>
   )
 }

@@ -23,8 +23,8 @@ const skillsData = [
 const Skills = () => {
   return (
     <Layout>
-    <div className="max-w-xs mx-auto">
-      <h2 className="text-xl font-bold mb-4">Main Skills</h2>
+    <div className="myskills">
+      <h2 className="name">Main Skills</h2>
       {skillsData.map((skill, index) => (
         <Skill key={index} name={skill.name} level={skill.level} />
       ))}
