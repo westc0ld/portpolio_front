@@ -85,7 +85,7 @@
 
 .message.bot {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     color: #333;
     background-color: #c2c4c9;
@@ -121,6 +121,17 @@
 .chat-input button:hover {
     background-color: #434446;
 }
+}
+
+.Loading{
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color : "black"; 
+    height : 100px;
+    width : 100px;
+
 }
 
 /* footer */
@@ -405,4 +416,29 @@ border-color: #817d7d;
   .skill-level {
     color: #6B7280; /* 회색 텍스트 색상 설정 */
   }
+}
+
+/* loading */
+.chat-container {
+  position: relative;
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(248, 245, 245, 0.8); /* 반투명 배경 */
+  z-index: 10; /* 다른 요소들 위에 표시되도록 */
+
+.ment{
+  font-weight: 1300;
+  padding-top: 30px;
+}
+}
+
 }
