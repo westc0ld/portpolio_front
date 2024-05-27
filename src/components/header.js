@@ -1,7 +1,10 @@
 import Link from "next/link"
+import { Link as ScrollLink, Element } from 'react-scroll';
+
 
 
 export default function Header() {
+    
     return (
         <>
             <header className="header">
@@ -11,13 +14,24 @@ export default function Header() {
                             West_Cold
                         </div>
                     </Link>
-                <div className="menus">
-                    <Link className="mr-5 hover:text-gray-900" href="/menus" passHref>menus</Link>
-                    <Link className="mr-5 hover:text-gray-900" href="/about" passHref>about</Link>
-                    <Link className="mr-5 hover:text-gray-900" href="/skills" passHref>skills</Link>
-                    <Link className="mr-5 hover:text-gray-900" href="/blog" passHref>blog</Link>
-                    <Link className="mr-5 hover:text-gray-900" href="/contact" passHref>contact</Link>
-                </div>
+                    <div className="menus">
+                        <Link href="#chat" passHref>
+                            <div className="li">Chat</div>
+                        </Link>
+                        <Link href="#about" passHref>
+                            <div className="li">About</div>
+                        </Link>
+                        <Link href="#skills" passHref>
+                            <div className="li">Skills</div>
+                        </Link>
+                        <Link href="#projects" passHref>
+                            <div className="li">Projects</div>
+                        </Link>
+                        <Link href="#contact" passHref>
+                            <div className="li">Contact</div>
+                        </Link>
+                    </div>
+                    <Link  className="material-symbols-outlined" href="#" passHref></Link>                        
                 </div>   
             </header>
         </>

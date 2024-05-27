@@ -22,14 +22,12 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <Layout>
     <div className="myskills">
       <h2 className="name">Main Skills</h2>
       {skillsData.map((skill, index) => (
         <Skill key={index} name={skill.name} level={skill.level} />
       ))}
     </div>
-    </Layout>
   );
 };
 

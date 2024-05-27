@@ -2,9 +2,8 @@ import Layout from "../components/layout";
 
 const contents = () => {
   return (
-    <Layout>
         <section className="about">
-            <div className="container">
+            <div className="about_container">
                 <div className="mini">
                     <div className="content_1">
                         <div className="photo">
@@ -30,7 +29,6 @@ const contents = () => {
                 </div>
             </div>
       </section>
-    </Layout>
   )
 }
 

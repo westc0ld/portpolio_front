@@ -4,16 +4,16 @@ import Link from "next/link";
 
 const Contents = () => {
   return (
-    <Layout>
       <div className="menus_1">
         <div className="container">
+          <div className="project_name">my projects</div>
           <div className="flex">
           <div className="section-box">
               <h2 className="title">home</h2>
               <p className="text-base">chatbot</p>
               <Link href="/'">
                 <div className="inline-flex">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                  <svg fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
                 </div>
@@ -66,7 +66,6 @@ const Contents = () => {
           </div>
         </div>
       </div>
-    </Layout>
   );
 }
 
