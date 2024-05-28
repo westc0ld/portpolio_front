@@ -54,35 +54,42 @@ const ChatGPT = () => {
  
 
     return (
-        <div className="chat-container">
-            {isLoading && (
-                <div className="loading-overlay">
-                    <Loading />
-                    <div className='ment'>AI에게 물어보는 중이랑께~</div>
-                </div>
-            )}
-            <div className="chat-history" ref={chatHistoryRef}>
-                {chatHistory.map((message, index) => (
-                    <div key={index} className={`message ${message.sender}`}>
-                        {message.text}
+        <>
+            <div className="intro">서찬의 포트폴리오</div>
+            <div className="chat">
+                <div className="chat-container">
+                    {isLoading && (
+                        <div className="loading-overlay">
+                            <Loading />
+                            <div className='ment'>AI에게 물어보는 중이랑께~</div>
+                        </div>
+                    )}
+                    <div className="chat-history" ref={chatHistoryRef}>
+                        {chatHistory.map((message, index) => (
+                            <div key={index} className={`message ${message.sender}`}>
+                                {message.text}
+                            </div>
+                        ))}
+                        {(chatHistory.length === 0) && (
+                            <div className="messagebot">서찬에 대해 궁금한 것을 입력하세요</div>
+                        )}
                     </div>
-                ))}
-                {(chatHistory.length === 0) && (
-                    <div className="messagebot">서찬에 대해 궁금한 것을 입력하세요<br />(질문은 최대 10개까지 가능합니다)</div>
-                )}
+                    <div className="chat-input">
+                        <input
+                            type="text"
+                            value={inputValue}
+                            onChange={handleInputChange}
+                            onKeyPress={handleKeyPress}
+                            placeholder="메시지를 입력하세요..."
+                        />
+                        <button onClick={sendMessage}>전송</button>
+                    </div>
+                </div>
+                <div className="warning">
+                     *질문은 최대 10개까지 가능합니다<br />*저와 관련없는 질문의 답으로 false가 3번 나오면 채팅이 종료됩니다
+                </div>
             </div>
-            <div className="chat-input">
-                <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                    onKeyPress={handleKeyPress}
-                    placeholder="메시지를 입력하세요..."
-                />
-                <button onClick={sendMessage}>전송</button>
-                
-            </div>
-        </div>
+         </>
     );
 };
 

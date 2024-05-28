@@ -8,7 +8,6 @@ export default function Header() {
     return (
         <>
             <header className="header">
-                <div className="container">
                     <Link href="/" className="left">
                         <div className="name" >
                             West_Cold
@@ -31,8 +30,7 @@ export default function Header() {
                             <div className="li">Contact</div>
                         </Link>
                     </div>
-                    <Link  className="material-symbols-outlined" href="#" passHref></Link>                        
-                </div>   
+                    <Link  className="material-symbols-outlined" href="#" passHref></Link>                          
             </header>
         </>
     )

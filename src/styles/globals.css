@@ -9,51 +9,46 @@ html {
 /* //header */
 .header {
   position:fixed;
-    z-index: 10000;
-  /* 박스의 배경색을 설정합니다. */
+  z-index: 10000;
   display: flex;
-  top: 0;
+  justify-content: center;
   background-color: rgb(12, 12, 12);
   width: 100%;
-  margin: 0;
-  padding-right: 0;
   font-family: "Gasoek One", sans-serif;
   color: #ebedf1;
-}
-
-.header .container {
   display: flex;
   justify-content: space-between;
-  /* // border: 1px solid red; */
+  height: 80px;
 }
 
-.header .container .left {
+
+.header .left {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 30px; /* 각 박스 사이의 간격을 조절합니다. */
 }
 
-.header .container .left .name {
+.header .left .name {
   font-size: 36px;
 }
 
-.header .container .menus {
+.header .menus {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
 }
 
-.header .container .menus .li {
+.header .menus .li {
   margin-right: 1.25rem; /* Tailwind CSS의 mr-5는 1.25rem 입니다 */
 }
 
-.header .container .menus .li:hover {
+.header .menus .li:hover {
   color: #5b5d63; /* Tailwind CSS의 text-gray-900 색상 코드 */
 }
 
-.header .container .material-symbols-outlined{
+.header .material-symbols-outlined{
   position: absolute;
   right: 32px;
   font-size: 50px;
@@ -62,22 +57,22 @@ html {
 }
 
 @media screen and (max-width:768px){
-  .header .container{
+  .header{
     flex-direction: column;
     align-items: first flex-start;
     padding: 8px;
   }
-  .header .container .menus{
+  .header .menus{
     display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .header .container .menus .li{
+  .header.menus .li{
     width: 100%;
     text-align: center;
   }
-  .header .container .material-symbols-outlined{
+  .header .material-symbols-outlined{
     display: block;
   }
   .material-symbols-outlined.active{
@@ -95,13 +90,28 @@ body {
   background: linear-gradient(166deg, rgba(221,221,227,1) 0%, rgba(179,179,179,1) 54%, rgb(136, 132, 132) 100%);
 
 }
-  .chat-container {
-    width: calc(60%); /* 전체 너비에서 좌우 여백을 뺀 값으로 설정합니다. */
+
+.intro{
+  display: flex;
+  justify-content: center;
+  margin:10px;
+  font-size: 45px;
+}
+.chat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -90px;
+
+
+.chat-container {
+    width: calc(70%); /* 전체 너비에서 좌우 여백을 뺀 값으로 설정합니다. */
     margin:  3rem auto; /* 위아래 여백은 1rem, 좌우 여백은 자동으로 가운데 정렬됩니다. */
     border: 2px solid #a39d9d; /* 네모난 선 스타일과 색상을 지정합니다. */
     border-radius: 8px;
     overflow: hidden;
-    margin-top:100px;
+    margin-top:90px;
 
 
 
@@ -174,6 +184,7 @@ body {
 }
 }
 
+
 .Loading{
 
     display: flex;
@@ -184,6 +195,15 @@ body {
     width : 100px;
 
 }
+.warning{
+  margin-top: -40px;
+  width   : calc(70%); /* 전체 너비에서 좌우 여백을 뺀 값으로 설정합니다. */
+  overflow: hidden;
+  }
+
+}
+
+
 
 
 /* contact */
@@ -197,6 +217,7 @@ body {
     margin-bottom: 150px;
 
 }
+
 
 /* menus */
 /* 기본 스타일 */
