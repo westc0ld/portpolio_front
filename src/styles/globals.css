@@ -46,7 +46,7 @@ html {
 
 .header .menus .li:hover {
   color: #5b5d63; /* Tailwind CSS의 text-gray-900 색상 코드 */
-}
+} 
 
 .header .material-symbols-outlined{
   position: absolute;
