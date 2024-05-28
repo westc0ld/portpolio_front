@@ -114,6 +114,17 @@ body {
   margin-top: 90px;
 }
 
+/* 화면 크기가 768px 이하일 때 (태블릿 및 모바일) */
+@media (max-width: 768px) {
+  .chat-container {
+      width: 100%; /* 너비를 100%로 설정 */
+      margin: 1rem; /* 좌우 여백을 줄여서 전체 너비를 차지하도록 설정 */
+      margin-top: 90px; /* 상단 여백을 줄임 */
+      margin-bottom: 50px; /* 하단 여백 유지 */
+  }
+}
+
+
 .chat-history {
   height: 350px;
   overflow-y: auto;
@@ -209,7 +220,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #d1cccc;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 
 }
 
