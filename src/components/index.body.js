@@ -23,7 +23,7 @@ const ChatGPT = () => {
     const sendMessage = async () => {
         setIsLoading(true); // 메시지 전송 시작 시 로딩 상태를 true로 설정합니다.
         try {
-            const response = await axios.post('https://api.westcold0035.com', {
+            const response = await axios.post('https://api.westcold0035.com/sendMessage', {
                 user_input: inputValue
             });
             setResponseMessage(response.data.description);
