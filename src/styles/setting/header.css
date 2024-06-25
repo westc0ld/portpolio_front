@@ -1,0 +1,73 @@
+/* //header */
+.header {
+    position:fixed;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(12, 12, 12);
+    width: 100%;
+    font-family: "Gasoek One", sans-serif;
+    color: #ebedf1;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+  
+  
+  .header .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%; /* 각 박스 사이의 간격을 조절합니다. */
+  }
+  
+  .header .left .name {
+    font-size: 36px;
+  }
+  
+  .header .menus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+  
+  .header .menus .li {
+    margin-right: 1.25rem; /* Tailwind CSS의 mr-5는 1.25rem 입니다 */
+  }
+  
+  .header .menus .li:hover {
+    color: #5b5d63; /* Tailwind CSS의 text-gray-900 색상 코드 */
+  } 
+  
+  .header .material-symbols-outlined{
+    position: absolute;
+    right: 32px;
+    font-size: 50px;
+    display: none;
+  
+  }
+  
+  @media screen and (max-width:768px){
+    .header{
+      flex-direction: column;
+      align-items: first flex-start;
+      padding: 8px;
+    }
+    .header .menus{
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .header.menus .li{
+      width: 100%;
+      text-align: center;
+    }
+    .header .material-symbols-outlined{
+      display: block;
+    }
+    .material-symbols-outlined.active{
+      display: flex;
+    }
+  }

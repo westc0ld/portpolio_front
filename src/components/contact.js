@@ -1,8 +1,8 @@
 // ContactPage.js
 
 import React from 'react';
-import ContactForm from '../components/contactform';
-import Layout from "../components/layout";
+import ContactForm from './contactform';
+import Layout from "../pages/layout";
 
 const ContactPage = () => {
   return (

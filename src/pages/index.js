@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Layout from "../components/layout";
-import ChatGPT from "../components/index.body";
-import About from "./about";
-import Skills from "./skills";
-import Projects from "./projects";
-import Contact from "./contact";
+import Layout from "./layout";
+import ChatGPT from "../components/chatgpt";
+import About from "../components/about";
+import Skills from "../components/skills";
+import Projects from "../components/projects";
+import Contact from "../components/contact";
+import Skills_info from "@/components/skills_info";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,8 @@ export default function Home() {
         <section id="about" style={{ paddingTop: "100px" }}>
           <About />
         </section>
-        <section id="skills"style={{ paddingTop: "150px" }} >
-          <Skills />
+        <section id="skills_info"style={{ paddingTop: "150px" }} >
+          <Skills_info />
         </section>
         <section id="projects" style={{ paddingTop: "100px" }}>
           <Projects />

@@ -1,6 +1,6 @@
-import Header from "./header"
-import Footer from "./footer"
-import HeadInfo from "./headinfo"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import HeadInfo from "../components/headinfo"
 
 export default function Layout({children}) {
     return (

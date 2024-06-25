@@ -1,0 +1,73 @@
+/* projects */
+  /* 기본 스타일 */
+  .menus_1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    
+    
+    /* 컨테이너 스타일 */
+    .container {
+        padding: 5rem 1.25rem;
+        margin: 0 auto;
+        max-width: 1200px;
+        
+    }
+    .project_name{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* flex 스타일 */
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* 각 섹션 스타일 */
+    .section-box {
+        width: 100%;
+        padding: 1.5rem 2rem;
+        border-left: 2px solid #d1d5db;
+        margin-bottom: 2rem;
+    
+    
+    .section-box:nth-child(2n) {
+        width: 50%;
+    }
+    
+    .section-box:nth-child(4n) {
+        width: 25%;
+    }
+    
+    /* 제목 스타일 */
+    .title {
+        font-size: 1.125rem;
+        color: #1f2937;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* 본문 텍스트 스타일 */
+    .text-base {
+        line-height: 1.5;
+        color: #4b5563;
+        margin-bottom: 1rem;
+    }
+    
+    /* 링크 스타일 */
+    .inline-flex {
+        display: inline-flex;
+        align-items: center;
+        color: #101111;
+        cursor: pointer;
+    }
+    
+    .inline-flex svg {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.5rem;
+    }
+}
+}

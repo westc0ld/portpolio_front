@@ -1,8 +1,8 @@
 // Skills.js
 
 import React from 'react';
-import Skill from '../components/skills';
-import Layout from "../components/layout";
+import Skill from './skills';
+import Layout from "../pages/layout";
 
 
 const skillsData = [
@@ -20,7 +20,7 @@ const skillsData = [
   ];
 
 
-const Skills = () => {
+const Skills_info = () => {
   return (
     <div className="myskills">
       <h2 className="name">Main Skills</h2>
@@ -31,5 +31,5 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Skills_info;
 

@@ -1,0 +1,11 @@
+ /* contact */
+ .contactform {
+    border: 3px solid #6b7280;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d1cccc;
+    margin-bottom: 50px;
+
+}
