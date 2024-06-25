@@ -17,16 +17,16 @@ export default function Home() {
         <section id="chat"style={{ paddingTop: "100px" }}>
           <ChatGPT />
         </section>
-        <section id="about" style={{ paddingTop: "100px" }}>
+        <section id="about" style={{ paddingTop: "0px" }}>
           <About />
         </section>
-        <section id="skills_info"style={{ paddingTop: "150px" }} >
+        <section id="skills_info"style={{ paddingTop: "100px" }} >
           <Skills_info />
         </section>
-        <section id="projects" style={{ paddingTop: "100px" }}>
+        <section id="projects" style={{ paddingTop: "30px" }}>
           <Projects />
         </section>
-        <section id="contact" style={{ paddingTop: "100px" }}>
+        <section id="contact" style={{ paddingTop: "0px" }}>
           <Contact />
         </section>
       </div>

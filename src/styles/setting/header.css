@@ -22,13 +22,13 @@
 }
 
 .header .left .name {
-  font-size: 2.25rem; /* 36px */
+  font-size: 1.5rem; /* 36px */
 }
 
 .header .menus {
   display: flex;
   align-items: center;
-  font-size: 1.5625rem; /* 25px */
+  font-size: 1.5rem; /* 25px */
 }
 
 .header .menus .li {
