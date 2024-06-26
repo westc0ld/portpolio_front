@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ContactForm from './contactform';
-import Layout from "../pages/layout";
 
 const ContactPage = () => {
   return (

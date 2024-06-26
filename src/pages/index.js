@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import Layout from "./layout";
 import ChatGPT from "../components/chatgpt";
 import About from "../components/about";
-import Skills from "../components/skills";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Skills_info from "@/components/skills_info";

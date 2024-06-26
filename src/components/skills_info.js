@@ -2,12 +2,11 @@
 
 import React from 'react';
 import Skill from './skills';
-import Layout from "../pages/layout";
 
 
 const skillsData = [
-    { name: 'HTML5', level: 80 },
-    { name: 'CSS3', level: 80 },
+    { name: 'HTML', level: 80 },
+    { name: 'CSS', level: 80 },
     { name: 'JavaScript', level: 70 },
     { name: 'React', level: 70 },
     { name: 'Next.js', level: 30 },
@@ -23,7 +22,7 @@ const skillsData = [
 const Skills_info = () => {
   return (
     <div className="myskills">
-      <h2 className="name">Main Skills</h2>
+      <h2 className="skill_name">Main Skills</h2>
       {skillsData.map((skill, index) => (
         <Skill key={index} name={skill.name} level={skill.level} />
       ))}

@@ -1,18 +1,18 @@
-// Skill.js
-
 import React from 'react';
 
 const Skill = ({ name, level }) => {
   return (
-    <div className="flex items-center mb-4">
-      <div className="w-32">{name}</div>
-      <div className="h-4 bg-gray-200 rounded-full flex-grow">
-        <div className={`h-full bg-indigo-500 rounded-full w-${level}`} />
+    <div className="skill">
+      <div className="skill_name">{name}</div>
+      <div className="graph_container">
+        <div className="graph_background">
+          <div className="graph_foreground" style={{ width: `${level}%` }}>
+            <div className="graph_percent">{`${level}%`}</div>
+          </div>
+        </div>
       </div>
-      <div className="ml-2">{level}%</div>
     </div>
   );
 };
 
 export default Skill;
-

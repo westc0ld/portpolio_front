@@ -55,30 +55,69 @@
             }
   
             .text-base {
+              display: flex;
               line-height: 1.625;
               text-align: left; /* 왼쪽 정렬 */
+              font-size: 20px;
+            }
+            
+            @media (max-width: 800px) {
+              .text-base {
+                line-height: 1.625;
+                text-align: left; /* 왼쪽 정렬 */
+                font-size: 13px;
+              }
             }
           }
+          
         
   
         .content_2 {
-          width: 66.666667%;
+          width: 66%;
           padding-left: 2rem; /* sm:pl-8 */
           padding-top: 2rem; /* sm:py-8 */
           padding-bottom: 2rem; /* sm:py-8 */
-          border-left-width: 1px; /* border-l */
-          border-color: #e5e7eb; /* border-gray-200 */
+          border-left-width: 3px; /* border-l */
+          border-color: #b0b2b6; /* border-gray-200 */
           margin-top: 1rem; /* mt-4 */
-          padding-top: 1rem; /* pt-4 */
           text-align: left; /* sm:text-left */
-          border-top-width: 0; /* sm:border-t-0 */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          .introduce_front{
+            font-size: 40px;
+            margin-bottom: 50px;
+          }
   
           .introduce {
-            font-size: 30px;
-            margin-bottom: 1rem; /* mb-4 */
-            padding-top: 10%;
+            font-size: 21px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
+
+          @media (max-width: 800px) {
+            .introduce_front{
+              font-size: 17px;
+              margin-bottom: 30px;
+            }
+
+            .introduce {
+              font-size: 13px;
+            }
+          }
+
         }
       }
   }
+}
+
+.font_calendar{
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
