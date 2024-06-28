@@ -43,18 +43,10 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%) scale(0.8);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  pointer-events: auto;
-  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* transition 속성 추가 */
+  pointer-events: auto; /* 클릭 가능하게 설정 */
+  cursor: pointer; /* 커서 모양 변경 */
 }
-
-.section-box.center {
-  transform: translateX(-50%) scale(1);
-  opacity: 1;
-  z-index: 2;
-  pointer-events: auto;
-}
-
 
 .section-box.center {
   transform: translateX(-50%) scale(1);
@@ -131,33 +123,16 @@
 
 @media (max-width: 768px) {
   .project-container {
-    flex-wrap: nowrap;
+    
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .section-box {
-    width: 90%; /* 모바일 화면에 맞게 넓이를 90%로 설정 */
-    margin: 0 auto; /* 중앙 정렬 */
-    left: 0;
-    transform: translateX(0); /* 중앙으로 이동 */
-  }
-
-  .section-box.center {
-    transform: translateX(0) scale(1); /* 중앙 정렬 및 원래 크기 */
-    opacity: 1;
-    z-index: 2;
-    pointer-events: auto;
-  }
-
-  .section-box.side-left, .section-box.side-right {
-    display: none; /* 좌우 박스 숨김 */
-  }
-
-  .navigation {
-    display: none; /* 네비게이션 버튼 숨김 */
+    width: calc(80%); /* 스마트폰 화면에 맞게 조정 */
+    margin-bottom: 2rem;
   }
 }
-
 
 @keyframes slideInFromRight {
   from {
