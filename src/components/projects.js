@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const projects = [
   {
@@ -30,62 +30,114 @@ const projects = [
 
 const Contents = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [direction, setDirection] = useState(''); // left or right
 
   const nextProject = () => {
-    setCurrentProjectIndex((prevIndex) =>
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-    );
+    if (animating) return;
+
+    setDirection('right');
+    setAnimating(true);
   };
 
   const prevProject = () => {
-    setCurrentProjectIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    );
+    if (animating) return;
+
+    setDirection('left');
+    setAnimating(true);
   };
 
+  useEffect(() => {
+    if (animating) {
+      const timer = setTimeout(() => {
+        setAnimating(false);
+
+        if (direction === 'right') {
+          const nextProjectIndex = (currentProjectIndex + 1) % projects.length;
+          setCurrentProjectIndex(nextProjectIndex);
+        } else if (direction === 'left') {
+          const prevProjectIndex = (currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1);
+          setCurrentProjectIndex(prevProjectIndex);
+        }
+      }, 1000); // Adjust according to animation time
+
+      return () => clearTimeout(timer);
+    }
+  }, [animating, direction, currentProjectIndex, projects.length]);
+
   return (
-
-      <div className="container">
-        <div className="project_name">my projects</div>
-        <div className="project-container">
-          {/* 왼쪽 프로젝트 박스 */}
-          <div className={`section-box side-left ${currentProjectIndex === 0 ? 'center' : ''}`}>
-            <h2 className="title">
-              {projects[(currentProjectIndex - 1 + projects.length) % projects.length].title}
-            </h2>
-            <p className="text-base">
-              {projects[(currentProjectIndex - 1 + projects.length) % projects.length].description}
-            </p>
-          </div>
-          
-          {/* 중앙 프로젝트 박스 */}
-          <div className="section-box center">
-            <h2 className="title">
-              {projects[currentProjectIndex].title}
-            </h2>
-            <p className="text-base">
-              {projects[currentProjectIndex].description}
-            </p>
-          </div>
-
-          {/* 오른쪽 프로젝트 박스 */}
-          <div className={`section-box side-right ${currentProjectIndex === projects.length - 1 ? 'center' : ''}`}>
-            <h2 className="title">
-              {projects[(currentProjectIndex + 1) % projects.length].title}
-            </h2>
-            <p className="text-base">
-              {projects[(currentProjectIndex + 1) % projects.length].description}
-            </p>
-          </div>
+    <div className="container">
+      <div className="project_name">My Projects</div>
+      <div className={`project-container ${animating ? `animating-${direction}` : ''}`}>
+        {/* Exiting left project box */}
+        <div className={`section-box side-left ${direction === 'left' ? 'exiting-left' : ''}`} onClick={() => prevProject()}>
+          <h2 className="title">
+            {projects[(currentProjectIndex - 1 + projects.length) % projects.length].title}
+          </h2>
+          <p className="text-base">
+            {projects[(currentProjectIndex - 1 + projects.length) % projects.length].description}
+          </p>
         </div>
 
-        {/* 네비게이션 버튼 */}
-        <div className="navigation">
-          <button onClick={prevProject}>&lt; Prev</button>
-          <button onClick={nextProject}>Next &gt;</button>
+        {/* Exiting right project box */}
+        <div className={`section-box side-right ${direction === 'right' ? 'exiting-right' : ''}`} onClick={() => nextProject()}>
+          <h2 className="title">
+            {projects[(currentProjectIndex + 1) % projects.length].title}
+          </h2>
+          <p className="text-base">
+            {projects[(currentProjectIndex + 1) % projects.length].description}
+          </p>
+        </div>
+
+        {/* Center project box */}
+        <div className="section-box center">
+          <h2 className="title">
+            {projects[currentProjectIndex].title}
+          </h2>
+          <p className="text-base">
+            {projects[currentProjectIndex].description}
+          </p>
+        </div>
+
+        {/* Entering new left project box */}
+        <div className={`section-box new-side new-side-left ${animating && direction === 'left' ? 'animating' : ''}`}>
+          <h2 className="title">
+            {direction === 'left'
+              ? projects[(currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1)].title
+              : projects[(currentProjectIndex + 1) % projects.length].title
+            }
+          </h2>
+          <p className="text-base">
+            {direction === 'left'
+              ? projects[(currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1)].description
+              : projects[(currentProjectIndex + 1) % projects.length].description
+            }
+          </p>
+        </div>
+
+        {/* Entering new right project box */}
+        <div className={`section-box new-side new-side-right ${animating && direction === 'right' ? 'animating' : ''}`}>
+          <h2 className="title">
+            {direction === 'right'
+              ? projects[(currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1)].title
+              : projects[(currentProjectIndex + 1) % projects.length].title
+            }
+          </h2>
+          <p className="text-base">
+            {direction === 'right'
+              ? projects[(currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1)].description
+              : projects[(currentProjectIndex + 1) % projects.length].description
+            }
+          </p>
         </div>
       </div>
 
+      {/* Navigation buttons */}
+      <div className="navigation">
+        <button onClick={prevProject}>&lt;</button>
+        <button onClick={nextProject}>&gt;</button>
+      </div>
+    </div>
   );
 };
 

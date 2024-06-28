@@ -7,6 +7,7 @@ import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Skills_info from "@/components/skills_info";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
         <section id="skills_info"style={{ paddingTop: "100px" }} >
           <Skills_info />
         </section>
-        <section id="projects" style={{ paddingTop: "30px" }}>
+        <section id="projects" style={{ paddingTop: "120px" }}>
           <Projects />
         </section>
         <section id="contact" style={{ paddingTop: "0px" }}>
