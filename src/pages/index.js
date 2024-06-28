@@ -26,7 +26,7 @@ export default function Home() {
         <section id="projects" style={{ paddingTop: "120px" }}>
           <Projects />
         </section>
-        <section id="contact" style={{ paddingTop: "0px" }}>
+        <section id="contact" style={{ paddingTop: "10px" }}>
           <Contact />
         </section>
       </div>

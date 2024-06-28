@@ -1,11 +1,79 @@
  /* contact */
+ .contact_container{
+    width: 70%; /* 전체 너비의 70%로 설정 */
+    margin: 5rem auto; /* 위아래 여백 3rem, 좌우 자동 */
+    border: 2px solid #a39d9d; /* 테두리 스타일과 색상 */
+    border-radius: 8px;
+    overflow: hidden;
+ }
+ 
+ 
  .contactform {
-    border: 3px solid #6b7280;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #d1cccc;
-    margin-bottom: 50px;
-
+    padding: 5% 0;
 }
+
+  .contactform .head {
+    /* Your styles for .head inside .contactform */
+    font-size: 40px;
+  }
+  
+  .contactform .input_container {
+    width: 70%;
+    margin-top: 2%;
+  }
+  
+  .contactform label {
+    /* Your styles for labels inside .contactform */
+    /* Example styles */
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+  }
+  
+  .contactform input[type="text"],
+  .contactform input[type="email"],
+  .contactform textarea {
+    /* Your styles for input and textarea inside .contactform */
+    /* Example styles */
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .contactform input[type="text"]:focus,
+  .contactform input[type="email"]:focus,
+  .contactform textarea:focus {
+    outline: none;
+    border-color: #4c51bf;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  
+  .contactform textarea {
+    /* Additional styles for textarea */
+    /* Example styles */
+    resize: vertical;
+  }
+  
+  .contactform button[type="submit"] {
+    /* Your styles for submit button inside .contactform */
+    /* Example styles */
+    background-color: #4c51bf;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .contactform button[type="submit"]:hover {
+    background-color: #6b7280;
+  }
+  

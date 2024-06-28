@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const projects = [
   {
@@ -59,7 +60,7 @@ const Contents = () => {
           const prevProjectIndex = (currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1);
           setCurrentProjectIndex(prevProjectIndex);
         }
-      }, 1000); // Adjust according to animation time
+      }, 800); // Adjust according to animation time
 
       return () => clearTimeout(timer);
     }
@@ -70,7 +71,7 @@ const Contents = () => {
       <div className="project_name">My Projects</div>
       <div className={`project-container ${animating ? `animating-${direction}` : ''}`}>
         {/* Exiting left project box */}
-        <div className={`section-box side-left ${direction === 'left' ? 'exiting-left' : ''}`} onClick={() => prevProject()}>
+        <div className={`section-box side-left ${direction === 'left' ? 'exiting-left' : ''}`} onClick={prevProject}>
           <h2 className="title">
             {projects[(currentProjectIndex - 1 + projects.length) % projects.length].title}
           </h2>
@@ -80,7 +81,7 @@ const Contents = () => {
         </div>
 
         {/* Exiting right project box */}
-        <div className={`section-box side-right ${direction === 'right' ? 'exiting-right' : ''}`} onClick={() => nextProject()}>
+        <div className={`section-box side-right ${direction === 'right' ? 'exiting-right' : ''}`} onClick={nextProject}>
           <h2 className="title">
             {projects[(currentProjectIndex + 1) % projects.length].title}
           </h2>
@@ -90,7 +91,7 @@ const Contents = () => {
         </div>
 
         {/* Center project box */}
-        <div className="section-box center">
+        <div className="section-box center" onClick={() => console.log("Center box clicked!")}>
           <h2 className="title">
             {projects[currentProjectIndex].title}
           </h2>
@@ -100,7 +101,7 @@ const Contents = () => {
         </div>
 
         {/* Entering new left project box */}
-        <div className={`section-box new-side new-side-left ${animating && direction === 'left' ? 'animating' : ''}`}>
+        <div className={`section-box new-side new-side-left ${animating && direction === 'left' ? 'animating' : ''}`} onClick={prevProject}>
           <h2 className="title">
             {direction === 'left'
               ? projects[(currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1)].title
@@ -116,7 +117,7 @@ const Contents = () => {
         </div>
 
         {/* Entering new right project box */}
-        <div className={`section-box new-side new-side-right ${animating && direction === 'right' ? 'animating' : ''}`}>
+        <div className={`section-box new-side new-side-right ${animating && direction === 'right' ? 'animating' : ''}`} onClick={nextProject}>
           <h2 className="title">
             {direction === 'right'
               ? projects[(currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1)].title
@@ -134,8 +135,12 @@ const Contents = () => {
 
       {/* Navigation buttons */}
       <div className="navigation">
-        <button onClick={prevProject}>&lt;</button>
-        <button onClick={nextProject}>&gt;</button>
+        <button className="arrow-button" onClick={prevProject}>
+          <FaChevronLeft />
+        </button>
+        <button className="arrow-button" onClick={nextProject}>
+          <FaChevronRight />
+        </button>
       </div>
     </div>
   );
