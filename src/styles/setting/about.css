@@ -62,10 +62,15 @@
             }
             
             @media (max-width: 800px) {
+              .abstract{
+                margin-left: 100px;
+              }
+
               .text-base {
                 line-height: 1.625;
                 text-align: left; /* 왼쪽 정렬 */
                 font-size: 13px;
+                margin-left: 10px;
               }
             }
           }
