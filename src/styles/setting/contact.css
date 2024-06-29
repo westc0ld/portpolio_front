@@ -1,78 +1,122 @@
-/* contact */
 .contact_container {
-    width: 90%;
-    max-width: 800px; /* 최대 너비 추가 */
-    margin: 5rem auto;
-    border: 2px solid #a39d9d;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #d1cccc; /* 배경색 추가 */
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1000px;
+  margin: 5rem auto;
+  border: 2px solid #0c0c0c;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #797676; /* 배경색 검정으로 변경 */
+  color: #fff; /* 글씨색 하얀색으로 변경 */
+  padding: 2rem; /* 패딩 추가 */
+}
+
+.contact_info {
+  flex: 1;
+  padding-right: 2rem;
+  border-right: 2px solid #a39d9d; /* 오른쪽 경계선 추가 */
+}
+
+.contact_info h2 {
+  font-size: 2.5rem; /* 제목 폰트 크기 조정 */
+  margin-bottom: 1rem;
+}
+
+.contact_info p {
+  font-size: 1.2rem; /* 텍스트 폰트 크기 조정 */
+  margin: 0.5rem 0;
+}
+
+.contactform {
+  flex: 2;
+  padding-left: 2rem;
+}
+
+.contactform .input_container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.contactform label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem; /* 글씨 크기 키움 */
+}
+
+.contactform input[type="text"],
+.contactform input[type="email"],
+.contactform input[type="tel"],
+.contactform textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.25rem;
+  transition: border-color 0.2s ease-in-out;
+  background-color: #333; /* 배경색 어두운 회색으로 변경 */
+  color: #fff; /* 글씨색 하얀색으로 변경 */
+}
+
+.contactform input[type="text"]:focus,
+.contactform input[type="email"]:focus,
+.contactform input[type="tel"]:focus,
+.contactform textarea:focus {
+  outline: none;
+  border-color: #4c51bf;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.contactform textarea {
+  resize: vertical;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.contactform button[type="submit"] {
+  background-color: #0f0; /* 버튼 배경색 초록으로 변경 */
+  color: #000; /* 버튼 글씨색 검정으로 변경 */
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.contactform button[type="submit"]:hover {
+  background-color: #6b7280;
+}
+
+.resume_download {
+  background-color: #0f0; /* 버튼 배경색 초록으로 변경 */
+  color: #000; /* 버튼 글씨색 검정으로 변경 */
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.resume_download:hover {
+  background-color: #6b7280;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+  .contact_container {
+    flex-direction: column; /* 세로로 배치 */
+  }
+  
+  .contact_info {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 2px solid #a39d9d; /* 아래쪽 경계선 추가 */
+    padding-bottom: 1rem; /* 아래쪽 패딩 추가 */
+    margin-bottom: 2rem; /* 아래쪽 여백 추가 */
   }
   
   .contactform {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2% 5%; /* 좌우 패딩 추가 */
+    padding-left: 0;
+    padding-top: 1rem; /* 위쪽 패딩 추가 */
   }
-  
-  .contactform .head {
-    font-size: 2rem; /* 더 작은 사이즈로 수정 */
-    margin-bottom: 1rem; /* 아래 여백 추가 */
-    color: #4a5568;
-  }
-  
-  .contactform .input_container {
-    width: 100%; /* 너비를 100%로 설정 */
-    margin-top: 1rem; /* 위쪽 여백 축소 */
-  }
-  
-  .contactform label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #4a5568;
-    font-size: 1rem; /* 더 작은 사이즈로 수정 */
-  }
-  
-  .contactform input[type="text"],
-  .contactform input[type="email"],
-  .contactform textarea {
-    width: 100%;
-    padding: 0.75rem; /* 패딩 증가 */
-    border: 1px solid #cbd5e0;
-    border-radius: 0.25rem;
-    transition: border-color 0.2s ease-in-out;
-  }
-  
-  .contactform input[type="text"]:focus,
-  .contactform input[type="email"]:focus,
-  .contactform textarea:focus {
-    outline: none;
-    border-color: #4c51bf;
-    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
-  }
-  
-  .contactform textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #cbd5e0;
-    border-radius: 0.25rem;
-    resize: vertical;
-    transition: border-color 0.2s ease-in-out;
-  }
-  
-  .contactform button[type="submit"] {
-    background-color: #4c51bf;
-    color: white;
-    padding: 0.75rem 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    margin-top: 1rem; /* 위쪽 여백 추가 */
-  }
-  
-  .contactform button[type="submit"]:hover {
-    background-color: #6b7280;
-  }
-  
+}
