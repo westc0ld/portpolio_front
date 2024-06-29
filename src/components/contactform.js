@@ -13,7 +13,7 @@ const ContactForm = () => {
   // 이력서 다운로드 처리
   const handleResumeDownload = async () => {
     try {
-      const response = await axios.get('http://api.westcold0035.com/download-resume', {
+      const response = await axios.get('https://api.westcold0035.com/download-resume', {
         responseType: 'blob',
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -39,7 +39,7 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await axios.post('http://api.westcold0035.com/send-email', data, {
+      const response = await axios.post('https://api.westcold0035.com/send-email', data, {
         headers: {
           'Content-Type': 'application/json',
         },
