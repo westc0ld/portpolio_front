@@ -67,7 +67,7 @@ const Contents = () => {
   }, [animating, direction, currentProjectIndex, projects.length]);
 
   return (
-    <div className="container">
+    <div className="project_container">
       <div className="project_name">My Projects</div>
       <div className={`project-container ${animating ? `animating-${direction}` : ''}`}>
         {/* Exiting left project box */}

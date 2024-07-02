@@ -1,10 +1,6 @@
-.projects {
-  padding: 0;
-}
 
-.container {
+.project_container {
   margin: 0 auto;
-  max-width: 1200px;
   padding: 0;
   z-index: 0;
   position: relative; /* 버튼의 절대 위치를 위한 상대 위치 */

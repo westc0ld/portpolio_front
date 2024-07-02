@@ -1,6 +1,30 @@
-  /* body */
-  body {
+  /* body*/
+ /* body {
     
-    background: linear-gradient(166deg, rgba(221,221,227,1) 0%, rgba(179,179,179,1) 54%, rgb(136, 132, 132) 100%);
+    background-color: #0e1625;
+    /* background: linear-gradient(166deg, rgba(221,221,227,1) 0%, rgba(179,179,179,1) 54%, rgb(136, 132, 132) 100%); */
+/*}*/
   
+  #Landing{
+    background-color: #0e1625;
+  }
+
+  #chat{
+    background-color:  #A5ABBD;
+  }
+
+  #about{
+    background-color: #0e1625;
+  }
+
+  #skills_info{
+    background-color: #A5ABBD;
+  }
+
+  #projects{
+    background-color: #0e1625;
+  }
+
+  #contact{
+    background-color: #A5ABBD;
   }

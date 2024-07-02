@@ -8,6 +8,7 @@ html {
 }
 
 
+
 @import "setting/header.css";
 @import "setting/body.css";
 @import "setting/skills.css";
@@ -16,6 +17,7 @@ html {
 @import "setting/footer.css";
 @import "setting/about.css";
 @import "setting/chatgpt.css";
+@import "setting/Landing.css";
 
 
 
