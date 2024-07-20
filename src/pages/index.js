@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Layout from "./layout";
 import Start from "../components/Landing";
-import ChatGPT from "../components/Chatgpt";
+import ChatGPT from "../components/chatgpt";
 import About from "../components/about";
 import Contents from "../components/projects";
 import Contact from "../components/contact";
