@@ -51,8 +51,6 @@ const ChatGPT = () => {
         }
     };
 
- 
-
     return (
         <>
             <div className="chat">
@@ -85,10 +83,10 @@ const ChatGPT = () => {
                     </div>
                 </div>
                 <div className="warning">
-                        *질문은 최대 10개까지 가능합니다<br />*저와 관련없는 질문의 답으로 false가 3번 나오면 채팅이 종료됩니다
+                    *질문은 최대 10개까지 가능합니다<br />*저와 관련없는 질문의 답으로 false가 3번 나오면 채팅이 종료됩니다
                 </div>
             </div>
-         </>
+        </>
     );
 };
 
