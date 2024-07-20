@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* 콘텐츠 간 간격 조정 */
-    height: 1000px;
+    height: 100%;
   }
   
   .intro_content1, .intro_content2 {
@@ -14,11 +14,17 @@
   .intro_content1{
     color: aliceblue;
   }
+  
 
   .abstract {
     text-align: left; /* 텍스트 정렬 */
     
     
+  }
+
+.abstract_name{
+    color: aliceblue;
+    font-size: 40px;
   }
   
   .line {
@@ -27,9 +33,8 @@
     margin: 10px 0; /* 선의 위아래 간격 */
   }
   
-  .text-base {
-    font-size: 16px; /* 텍스트 크기 */
-
+  .text_base {
+    font-size: 25px; /* 텍스트 크기 */
   }
   
   .security {
