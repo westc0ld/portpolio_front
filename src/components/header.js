@@ -54,9 +54,9 @@ export default function Header() {
                 <Link href="#about" passHref>
                     <div className="li">About</div>
                 </Link>
-                <Link href="#skills_info" passHref>
+                {/* <Link href="#skills_info" passHref>
                     <div className="li">Skills</div>
-                </Link>
+                </Link> */}
                 <Link href="#projects" passHref>
                     <div className="li">Projects</div>
                 </Link>

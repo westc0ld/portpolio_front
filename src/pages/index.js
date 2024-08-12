@@ -22,9 +22,9 @@ export default function Home() {
         <section id="about" style={{ paddingTop: "0px" }}>
           <About />
         </section>
-        <section id="skills_info" style={{ paddingTop: "100px" }}>
+        {/* <section id="skills_info" style={{ paddingTop: "100px" }}>
           <Skills_info />
-        </section>
+        </section> */}
         <section id="projects" style={{ paddingTop: "120px" }}>
           <Contents />
         </section>
