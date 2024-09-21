@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/global.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@import "setting/header.css";
+@import "setting/body.css";
+@import "setting/skills.css";
+@import "setting/projects.css";
+@import "setting/contact.css";
+@import "setting/footer.css";
+@import "setting/about.css";
+@import "setting/chatgpt.css";
+@import "setting/Landing.css";
+
+
+
+
+
+
+
+
+
+

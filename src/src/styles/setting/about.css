@@ -1,7 +1,7 @@
 /* about */
 .about {
   font-family: Arial, sans-serif;
-  color: #d4d9e0; /* text-gray-600 */
+  color: #4b5563; /* text-gray-600 */
   margin: 0;
   padding: 0;
 }
@@ -79,18 +79,6 @@
   align-items: center;
   flex-direction: column;
 }
-
-.character {
-  display: flex;
-  align-items: center;
-  justify-content: space-around; /* 공간을 골고루 배분하여 뛰어쓰기 적용 */
-}
-
-.expert {
-  margin: 0 1rem; /* 각 요소 사이에 1rem 간격 추가 */
-}
-
-
 
 .introduce_front {
   font-size: 40px;

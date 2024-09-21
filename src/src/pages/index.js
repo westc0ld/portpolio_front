@@ -11,18 +11,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    
     <Layout>
       <div className="body">
-        {/* <section id="Landing" style={{ paddingTop: "100px" }}>
+        <section id="Landing" style={{ paddingTop: "100px" }}>
           <Intro />
-        </section> */}
-        
-        <section id="about" style={{ paddingTop: "0px" }}>
-          <About />
         </section>
         <section id="chat" style={{ paddingTop: "100px" }}>
           <ChatGPT />
+        </section>
+        <section id="about" style={{ paddingTop: "0px" }}>
+          <About />
         </section>
         {/* <section id="skills_info" style={{ paddingTop: "100px" }}>
           <Skills_info />

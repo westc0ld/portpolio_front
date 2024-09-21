@@ -48,11 +48,11 @@ export default function Header() {
                 <div className="name">West_Cold</div>
             </Link>
             <div className="menus">
-                <Link href="#about" passHref>
-                    <div className="li">About</div>
-                </Link>
                 <Link href="#chat" passHref>
                     <div className="li">Chat</div>
+                </Link>
+                <Link href="#about" passHref>
+                    <div className="li">About</div>
                 </Link>
                 {/* <Link href="#skills_info" passHref>
                     <div className="li">Skills</div>

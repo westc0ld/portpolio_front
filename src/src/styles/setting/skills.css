@@ -1,0 +1,59 @@
+.myskills {
+  margin-inline: 7%; /* 가운데 정렬 */
+}
+
+.myskills .skill_name {
+  font-size: 1.25rem; /* 제목 폰트 크기 */
+  font-weight: bold; /* 볼드체로 설정 */
+  margin-bottom: 1rem; /* 하단 여백 설정 */
+}
+
+.skill {
+  margin-bottom: 1rem; /* 하단 여백 설정 */
+}
+
+.skill_name {
+  font-weight: bold; /* 볼드체로 설정 */
+}
+
+
+.graph_container {
+  display: flex;
+  width: 100%;
+}
+
+.graph_background {
+  height: 1.5rem; /* h-4 equivalent */
+  background-color: #e2e8f0; /* bg-gray-200 equivalent */
+  border-radius: 9999px; /* rounded-full equivalent */
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.graph_foreground {
+  height: 100%;
+  background: linear-gradient(166deg, rgb(15, 15, 15) 0%, rgb(92, 90, 90) 54%, rgb(146, 144, 144) 100%);
+  border-radius: 9999px; /* rounded-full equivalent */
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.graph_foreground:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.graph_percent {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: rgba(53, 53, 53, 0.923);
+  padding: 5px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 1; /* 다른 요소보다 위에 오도록 설정 */
+}

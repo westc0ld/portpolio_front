@@ -23,11 +23,7 @@ const Contents = () => {
           </div>
           <div className="content_2">
             <h2 className="introduce_front">긍정에너지가 넘치는 서찬입니다!</h2>
-            <div className="character">
-              <div className="expert">#전문성</div> 
-              <div className="expert">#성실성</div>
-              <div className="expert">#사회봉사</div>
-            </div>
+            <p className="introduce">&nbsp;안녕하세요, 보안전문가를 꿈꾸고 있는 서찬이라고 합니다.<br />나날이 성장하고 발전하는 것을 즐기는 사람입니다.<br />언제나 새로운 도전을 즐기며 적극적으로 나아가는 성격을 가지고 있습니다.<br />주변 사람들과 소통을 중요시하며 친절하고 협력적인 성향을 가지고 있습니다.<br />항상 포기하지 않고 열정적으로 목표를 향해 나아가는 것을 좋아합니다.<br />함께 즐거움과 성취를 공유할 수 있는 좋은 동료가 되고 싶습니다.</p>
           </div>
         </div>
       </div>
