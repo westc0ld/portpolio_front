@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Layout from "./layout";
 import Intro from "../components/Landing";
-import ChatGPT from "../components/ChatGPT"; // 파일 이름 대소문자 확인
+import ChatGPT from "../components/chatgpt"; // 파일 이름 대소문자 확인
 import About from "../components/about";
 import Contents from "../components/projects";
 import Contact from "../components/contact";
